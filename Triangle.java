@@ -1,4 +1,4 @@
-git commitpublic class Triangle {
+public class Triangle {
   public int mSideOne;
   public int mSideTwo;
   public int mSideThree;
@@ -9,20 +9,24 @@ git commitpublic class Triangle {
     mSideThree = sideThree;
   }
 
-  public Boolean verifyTriangle(int sideOne, int sideTwo, int sideThree) {
-    if (sideOne + sideTwo < sideThree || sideOne + sideThree < sideTwo || sideTwo + sideThree < sideOne) {
+  public String verifyTriangle(int sideOne, int sideTwo, int sideThree) {
+    String result = "";
+    if (sideOne > sideTwo + sideThree || sideTwo > sideThree + sideOne || sideThree > sideTwo + sideOne) {
+      result = "That is not a triangle";
+      System.out.println(result);
+    } else {
     }
-    return false;
+    return result;
   }
 
   public String typeOfTriangle(int sideOne, int sideTwo, int sideThree) {
     String type = "";
     if (sideOne == sideTwo && sideTwo == sideThree) {
-      type = "Equalateral";
+      System.out.println("Equalateral");
     } else if (sideOne != sideTwo && sideTwo != sideThree && sideThree != sideOne) {
-      type = "Scalene";
+      System.out.println("Scalene");
     } else {
-      type = "Isosceles";
+      System.out.println("Isosceles");
     }
     return type;
   }

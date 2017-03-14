@@ -12,6 +12,9 @@ public class App {
     int three = Integer.parseInt(myConsole.readLine());
 
     Triangle firstTriangle = new Triangle(one, two, three);
+    firstTriangle.verifyTriangle(one, two, three);
+    firstTriangle.typeOfTriangle(one, two, three);
+
 
     // if (Triangle.verifyTriangle.equals(false)) {
     //   System.out.println("That is not a triangle, try again!");
